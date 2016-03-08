@@ -1,5 +1,4 @@
 # Java Serial Killer
-=========
 
 Burp extension to perform Java Deserialization Attacks using the ysoserial payload generator tool.
 
