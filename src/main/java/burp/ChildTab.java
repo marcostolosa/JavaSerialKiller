@@ -1,9 +1,12 @@
 package burp;
 
+import com.google.common.primitives.Bytes;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
 
 public class ChildTab implements IMessageEditorController, ActionListener {
 
@@ -16,9 +19,14 @@ public class ChildTab implements IMessageEditorController, ActionListener {
     private byte[] request;
     private byte[] response;
 
+    public static byte[] selectedMessage;
+
     private final JPanel panel;
 
+    public static boolean isEncoded;
+
     JButton goButton;
+    JCheckBox base64CheckBox;
 
     private final JComboBox<String> payloadComboBox;
 
@@ -58,6 +66,8 @@ public class ChildTab implements IMessageEditorController, ActionListener {
         serializeButton.setActionCommand("serialize");
         serializeButton.addActionListener(ChildTab.this);
 
+        base64CheckBox = new JCheckBox("Base64 Encode");
+
         String[] typeStrings = { "BeanShell1","CommonsBeanutilsCollectionsLogging1", "CommonsCollections1", "CommonsCollections2", "CommonsCollections3", "CommonsCollections4","Groovy1","Jdk7u21","Spring1"};
         payloadComboBox = new JComboBox<>(typeStrings);
         JButton helpButton = new JButton("?");
@@ -65,6 +75,7 @@ public class ChildTab implements IMessageEditorController, ActionListener {
         helpButton.addActionListener(ChildTab.this);
         topButtonPanel.add(goButton);
         topButtonPanel.add(serializeButton);
+        topButtonPanel.add(base64CheckBox);
         topButtonPanel.add(payloadComboBox);
         topButtonPanel.add(helpButton);
 
@@ -122,13 +133,17 @@ public class ChildTab implements IMessageEditorController, ActionListener {
 
         byte[] message = requestViewer.getMessage();
 
+        byte[] selectedMessage = requestViewer.getSelectedData();
+
         // String[] command = Utilities.formatCommand(commandTextField.getText());
+
+        boolean isEncoded = base64CheckBox.isSelected();
 
         String command = commandTextField.getText();
 
         String payloadType = payloadComboBox.getSelectedItem().toString();
 
-        byte[] httpMessage = Utilities.serializeRequest(message,command,helpers,payloadType);
+        byte[] httpMessage = Utilities.serializeRequest(message,selectedMessage,isEncoded,command,helpers,payloadType);
 
         requestViewer.setMessage(httpMessage, true);
 
