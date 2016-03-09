@@ -8,7 +8,7 @@ Chris Frohoff's ysoserial (https://github.com/frohoff/ysoserial)
 
 Requirements: Java 8 
 
-Download from the Releases tab: https://github.com/NetSPI/Burp-Extensions/releases
+Download from the Releases tab: https://github.com/NetSPI/JavaSerialKiller/releases
 
 Right-click on a request and select Send to Java Serial Killer
 
