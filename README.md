@@ -26,18 +26,18 @@ Note: You do not need to re-highlight the serialized Java object if you change t
 ##Examples
 ###Serialize Request Body
 1. Highlight request body
-![alt tag](https://blog.netspi.com/wp-content/uploads/2016/03/SNAG-0000.png)
+![alt tag](https://blog.netspi.com/wp-content/uploads/2016/03/java-deserialization-attacks-with-burp-6174.png)
 2. Press the Serialize button
-![alt tag](https://blog.netspi.com/wp-content/uploads/2016/03/SNAG-0001.png)
+![alt tag](https://blog.netspi.com/wp-content/uploads/2016/03/java-deserialization-attacks-with-burp-6175.png)
 3. Check the Base64 Encode box and press the Serialize button
-![alt tag](https://blog.netspi.com/wp-content/uploads/2016/03/SNAG-0002.png)
+![alt tag](https://blog.netspi.com/wp-content/uploads/2016/03/java-deserialization-attacks-with-burp-6176.png)
 
 ###Serialize Request Body Parameter
 1. Highlighting parameter in request body
-![alt tag](https://blog.netspi.com/wp-content/uploads/2016/03/SNAG-0004.png)
+![alt tag](https://blog.netspi.com/wp-content/uploads/2016/03/java-deserialization-attacks-with-burp-6177.png)
 2. Press the Serialize button
-![alt tag](https://blog.netspi.com/wp-content/uploads/2016/03/SNAG-0005.png)
+![alt tag](https://blog.netspi.com/wp-content/uploads/2016/03/java-deserialization-attacks-with-burp-6178.png)
 3. Check the Base64 Encode box and press the Serialize button
-![alt tag](https://blog.netspi.com/wp-content/uploads/2016/03/SNAG-0006.png)
+![alt tag](https://blog.netspi.com/wp-content/uploads/2016/03/java-deserialization-attacks-with-burp-6179.png)
 
 
