@@ -1,3 +1,6 @@
+# Note
+**I am not actively updating this extension. I recommend using either https://github.com/federicodotta/Java-Deserialization-Scanner or https://portswigger.net/bappstore/e20cad259d73403bba5ac4e393a8583f for exploiting Java Deserialization**
+
 # Java Serial Killer
 
 Burp extension to perform Java Deserialization Attacks using the ysoserial payload generator tool.
